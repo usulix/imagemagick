@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  imagemagick:
+    container_name: imagemagick
+    build: './imagemagick'
+    restart: on-failure
+    volumes:
+        - type: bind
+          consistency: consistent
+          #source: /c/Users/C22Piper.Gray
+          source: './data'
+          target: /data
+          volume:
+            nocopy: false
+  portainer:
+    container_name: portainer
+    image: 'portainer/portainer:latest'          
