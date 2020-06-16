@@ -14,4 +14,4 @@ RUN apt-get -y update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /ImageMagick
 
-ENTRYPOINT ["convert"]
+CMD tail -f /dev/null
